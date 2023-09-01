@@ -23,5 +23,5 @@ cv2.imshow('img1-name', img1)
 cv2.imshow('img2-name', img2)
 cv2.waitKey(0)
 
-#here ImageRecog/Add-any-image.jpg represents to add image to the specified path
+#here ImageRecog/Add-any-image.jpg represents to add image to the specified path, create a folder named as ImageRecog and add your images.
 # imshow function displays image in a new window
