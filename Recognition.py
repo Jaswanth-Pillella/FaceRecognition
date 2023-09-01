@@ -2,9 +2,9 @@ import cv2
 # import numpy as np
 import face_recognition
 
-img1 = face_recognition.load_image_file('ImageRecog/lico1.jpg')
+img1 = face_recognition.load_image_file('ImageRecog/Add-any-image.jpg')
 img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
-img2 = face_recognition.load_image_file('ImageRecog/lico.jpg')
+img2 = face_recognition.load_image_file('ImageRecog/Add-any-image.jpg')
 img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
 
 faceLoc1 = face_recognition.face_locations(img1)[0]
@@ -19,6 +19,9 @@ result = face_recognition.compare_faces([encode1], encode2, 0.6)
 faceDistance = face_recognition.face_distance([encode1], encode2)
 cv2.putText(img2, f'{result} {round(faceDistance[0],2)}', (50, 50), cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255), 2)
 
-cv2.imshow('Lico1', img1)
-cv2.imshow('Lico', img2)
+cv2.imshow('img1-name', img1)
+cv2.imshow('img2-name', img2)
 cv2.waitKey(0)
+
+#here ImageRecog/Add-any-image.jpg represents to add image to the specified path
+# imshow function displays image in a new window
